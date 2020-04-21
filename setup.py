@@ -2,7 +2,7 @@ import setuptools, sys
 
 setuptools.setup(
     name="watchdog-tricks",
-    version='0.1.1',
+    version='0.1.2',
     license="MIT",
 
     author="Ryan Ye",
