@@ -4,6 +4,7 @@ from watchdog.tricks import Trick
 from watchdog_tricks import utils
 from threading import Thread
 
+
 class BatchTrick(Trick):
     """ Batching events within a time window and send it as a single event
     This would be particularly useful for things like restarting a server after code changes.
@@ -40,13 +41,14 @@ class BatchTrick(Trick):
             try:
                 event = self.event_queue.get(timeout=self.timeout)
                 events.append(event)
-            except queue.Queue.Empty:
+            except queue.Empty:
                 if events:
                     self.on_multiple_events(events)
                     events = []
 
     def on_multiple_events(self, events):
         raise NotImplementedError()
+
 
 class ServerRestartTrick(BatchTrick):
     def __init__(self, restart_command, **kwargs):
