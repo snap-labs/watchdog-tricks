@@ -40,7 +40,7 @@ class AutoCompileTrick(Trick):
 
     def compile(self, filename):
         utils.exec_cmd(self.assemble_compile_cmdline(filename, self.get_dest_fname(filename)))
-    
+
     def assemble_compile_cmdline(self, src, dst):
         return Template(self.compile_command).substitute({
             'src' : src,
