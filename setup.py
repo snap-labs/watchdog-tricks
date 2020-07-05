@@ -32,6 +32,6 @@ setuptools.setup(
             'ctagswatcher = watchdog_tricks.ctagswatcher:main',
         ]
     },
-    install_requires=['watchdog==0.10.2'],
+    install_requires=['watchdog==0.10.3'],
     packages=['watchdog_tricks'],
 )
