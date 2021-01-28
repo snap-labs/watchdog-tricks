@@ -2,7 +2,7 @@ import setuptools, sys
 
 setuptools.setup(
     name="watchdog-tricks",
-    version='0.1.3',
+    version='0.1.4',
     license="MIT",
 
     author="Ryan Ye",
@@ -32,6 +32,6 @@ setuptools.setup(
             'ctagswatcher = watchdog_tricks.ctagswatcher:main',
         ]
     },
-    install_requires=['watchdog[watchmedo]==0.10.3'],
+    install_requires=['watchdog[watchmedo]==1.0.2'],
     packages=['watchdog_tricks'],
 )
